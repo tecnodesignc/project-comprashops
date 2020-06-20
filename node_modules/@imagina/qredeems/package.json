@@ -1,0 +1,27 @@
+{
+  "author": "http://imaginacolombia.com",
+  "bugs": {
+    "url": "https://github.com/imagina/qredeems/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Package to use Iprofile in Base Quasar 1.0.0",
+  "homepage": "https://github.com/imagina/qredeems#readme",
+  "keywords": [
+    "quasar",
+    "laravel",
+    "asgardcms",
+    "qredeems"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@imagina/qredeems",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imagina/qredeems.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
+}

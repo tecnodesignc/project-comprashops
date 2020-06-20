@@ -1,0 +1,15 @@
+export default {
+  adminGroup : 'Trivias',
+  adminTrivias : 'Trivias List',
+  adminTriviasCreate : 'Create Trivia',
+  adminTriviasUpdate : 'Update Trivia',
+  adminQuestions : 'Questions List',
+  adminQuestionsCreate : 'Create Question',
+  adminQuestionsUpdate : 'Update Question',
+  adminAnswers : 'Answers List',
+  adminAnswersCreate : 'Create Answer',
+  adminAnswersUpdate : 'Update Answer',
+  adminRangepoints : 'Range points List',
+  adminRangepointsCreate : 'Create Range points',
+  adminRangepointsUpdate : 'Update Range points',
+}

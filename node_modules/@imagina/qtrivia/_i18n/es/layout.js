@@ -1,0 +1,28 @@
+export default {
+  singleTrivia: 'Trivia',
+  newTrivia : 'Nueva Trivia',
+  updateTrivia : 'Actualizar Trivia',
+  goTrivias : 'Ir a Trivias',
+  question: 'Pregunta | Preguntas',
+  newQuestion : 'Nueva Pregunta',
+  updateQuestion : 'Actualizar Pregunta',
+  goQuestions : 'Ir a Preguntas',
+  answer: 'Respuesta | Respuestas',
+  newAnswer : 'Nueva Respuesta',
+  updateAnswer : 'Actualizar Respuesta',
+  singleRangePoints: 'Rango de Puntos',
+  newRangePoint : 'Nuevo rango de puntos',
+  updateRangePoint : 'Actualizar rango de puntos',
+  form : {
+    fromDay : 'Desde el día',
+    untilDay : 'Hasta el día',
+    fromTime : 'Desde la hora',
+    untilTime : 'Hasta la hora',
+    startDate : 'Fecha inicial',
+    endDate : 'Fecha final',
+    logged: 'Usuario logueado',
+    correct: 'Respuesta correcta',
+    value: 'Valor (% completado de la trivia)',
+    points: 'Points',
+  }
+}
