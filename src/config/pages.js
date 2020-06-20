@@ -10,7 +10,7 @@ let responsePages = {
       path: '/catogory/:slug',
       name: 'store.category',
       layout: () => import('src/layouts/master'),
-      page: () => import('src/pages/front/store/index'),
+      page: () => import('src/pages/index'),
       title: 'app.layout.page.category',
       icon: 'icon name',
       authenticated: false
