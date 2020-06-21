@@ -8,7 +8,7 @@
           <logo-imagina></logo-imagina>
         </div>
         <div class="text-white text-center">
-          Copyright {{ new Date().getFullYear() }} © Donde esta esa vaina. Todos Los Derechos Reservados.
+          Copyright {{ new Date().getFullYear() }} © Donde esta esa vaina.
         </div>
       </div>
     </q-footer>
