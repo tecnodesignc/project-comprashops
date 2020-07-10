@@ -5,10 +5,9 @@
     <q-footer class="bg-degradado" v-if="$q.platform.is.desktop">
       <div class="row flex flex-center gutter-x-sm q-py-md">
         <div class="q-px-md">
-          <logo-imagina></logo-imagina>
         </div>
         <div class="text-white text-center">
-          Copyright {{ new Date().getFullYear() }} © Donde esta esa vaina. Todos Los Derechos Reservados.
+          Copyright {{ new Date().getFullYear() }} © Comprashops. Todos Los Derechos Reservados.
         </div>
       </div>
     </q-footer>

@@ -1,5 +1,10 @@
 <template>
-    <q-page class="">
+    <q-page class="home">
+        <div class="block-1">
+            <div class="q-container">
+                <slider/>
+            </div>
+        </div>
      <!--   <full-width-gallery system-name="principal"/>
         <top></top>
         <featured-stores></featured-stores>
@@ -84,6 +89,7 @@
 </style>
 
 <script>
+    import slider from 'src/components/front/home/slider'
    /* import fullWidthGallery from 'src/components/qslider/qcarousel'
     import top from 'src/components/themes/top'
     import featuredStores from 'src/components/themes/featuredStores'
@@ -96,6 +102,7 @@
     export default {
         name: 'PageIndex',
         components: {
+            slider
            /* fullWidthGallery,
             top,
             featuredStores,
@@ -246,3 +253,20 @@
         }
     }
 </script>
+<style lang="stylus">
+.home
+   .block-1
+        background url("/statics/bg/background-50x100.jpg") repeat
+    .q-container
+        @media screen and (min-width: $breakpoint-xs)
+            max-width 100%
+        @media screen and (min-width: $breakpoint-sm)
+            max-width 100%
+        @media screen and (min-width: $breakpoint-md)
+            max-width 960px
+        @media screen and (min-width: $breakpoint-lg)
+            max-width 1140px
+
+
+
+</style>
