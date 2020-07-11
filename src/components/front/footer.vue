@@ -1,19 +1,132 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
   <footer>
     <!--=== Copyright ===-->
     <q-no-ssr>
+
     <q-footer class="bg-degradado" v-if="$q.platform.is.desktop">
-      <div class="row flex flex-center gutter-x-sm q-py-md">
-        <div class="q-px-md">
-          <logo-imagina></logo-imagina>
+      <div class="row  flex gutter-x-sm q-py-md" style="height: 310px">
+          <div class="col-xs-1">
+
+          </div>
+          <div class="col-xs-5 text-h5 text-left">
+              <strong>Suscribirse al boletín informativo</strong>
+            <div class="text-body1">
+                No te pierdas miles de productos y promociones súper geniales
+            </div>
+
+          </div>
+          <div class="col-xs-3 text-left">
+              <q-input filled bg-color="white" color="black" v-model="text" label="Enter your email here..."></q-input>
+
+          </div>
+          <div class="col-xs-3">
+              <q-btn style="background: goldenrod; color: #656262; height: 55px" icon="mail" label="Suscribir" />
+          </div>
         </div>
-        <div class="text-white text-center">
-          Copyright {{ new Date().getFullYear() }} © Donde esta esa vaina.
-        </div>
-      </div>
+
     </q-footer>
 
-    <q-footer bordered v-else>
+        <q-footer class="bg-component itemsFooter" v-if="$q.platform.is.desktop">
+            <div class="row flex gutter-x-sm q-py-md" style="height: 220px">
+            <div class="col-xs-1">
+
+            </div>
+
+            <div class="col-xs-3 text-left	">
+                <div class="col text-h5 "style="height: 50px" >
+                    Contact Us
+                </div>
+
+                <div class="col text-h6 text-bold">
+                    HOTLINE: 038-2747903
+                </div>
+                <div class="col text-body1">
+                    (Free Call, 8:00 – 22:00)
+                </div>
+                <div class="col text-body1">
+                    Cll 28a N°30-29 Hipodromo
+                </div>
+                <div class="col text-body1">
+                    Ibague - Tolima
+                </div>
+                <div class="col text-body1">
+                    contact@tecnodesing.com
+                </div>
+            </div>
+
+            <div class="col-xs-2">
+                <div class="col text-h5 "style="height: 50px" >
+                    About Us
+                </div>
+                <div class="col">
+                    <a class="q-href" href="">About CompraShop</a>
+                </div>
+
+                <div class="col">
+                    <a class="q-href" href="">Sell On CompraShop</a>
+                </div>
+                <div class="col">
+                    <a class="q-href" href="">Affiliate Program</a>
+                </div>
+                <div class="col">
+                    <a class="q-href" href="">Careers</a>
+                </div>
+                <div class="col">
+                    <a class="q-href" href="">Term & Conditions</a>
+                </div>
+                <div class="col">
+                    <a class="q-href" href="">Privacy Policy</a>
+                </div>
+            </div>
+                <div class="col-xs-2">
+                    <div class="col text-h5 "style="height: 50px" >
+                        Help & Guide
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">Help Center</a>
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">How To Buy</a>
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">Shipping & Delivery</a>
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">Product Policy</a>
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">How To Return</a>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="col text-h5 "style="height: 50px" >
+                        Download the App
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">– Fast & Simple for shopping anywhere</a>
+                    </div>
+                    <div class="col">
+                        <a class="q-href" href="">– Support for iOS & Android</a>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <br>
+                        <a href="https://play.google.com/store">
+                            <img style="width: 150px" src="\statics\icons\android.png"></a>
+
+
+
+                        <a href="https://www.apple.com/ios/app-store/">
+                            <img style="width: 150px" src="\statics\icons\apple.png"></a>
+
+                    </div>
+                    </div>
+
+                </div>
+
+        </q-footer>
+
+      <q-footer bordered v-else>
       <q-tabs no-caps color="transparent" class="bg-degradado text-white">
         <q-route-tab
           icon="home"
@@ -32,7 +145,6 @@
           <q-card-section>
             <search-store></search-store>
           </q-card-section>
-
           <q-card-actions align="right">
             <q-btn flat color="white" label="CERRAR" v-close-popup />
           </q-card-actions>
@@ -45,7 +157,7 @@
   </footer>
 </template>
 <script>
-  import menuList from "../recursiveItem"
+  import menuList from "src/components/master/recursiveItem"
   import logoImagina from 'src/components/master/imaginaSVG'
   import searchStore from 'src/components/master/searchStore'
 
@@ -127,4 +239,16 @@
       background-color red
       .select-cities
         display block
+
+  .q-font-footer
+  text-weight-bolder
+    font-size 17px
+  .itemsFooter
+   background-color $grey-13
+  .q-href
+                    font-size 17px
+                    color white
+
+
+
 </style>
