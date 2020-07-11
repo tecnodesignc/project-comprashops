@@ -15,6 +15,17 @@ let responsePages = {
             icon: 'fas fa-home',
             authenticated: true
         },
+        admin: {
+            //permission: 'marketplace.stores.mystore',
+            activated: true,
+            path: '/admin',
+            name: 'app.admin',
+            layout: () => import('src/layouts/admin'),
+            page: () => import('pages/admin/index.vue'),
+            title: 'app.layout.page.administrador',
+            icon: 'far fa-envelope-open',
+            authenticated: true
+        },
         /*nosotros: {
             permission: null,
             activated: true,
@@ -81,17 +92,7 @@ let responsePages = {
             icon: 'far fa-envelope-open',
             authenticated: true
         },
-        admin: {
-            permission: 'marketplace.stores.mystore',
-            activated: true,
-            path: '/admin',
-            name: 'app.admin',
-            layout: () => import('src/layouts/admin'),
-            page: () => import('pages/admin/index.vue'),
-            title: 'app.layout.page.administrador',
-            icon: 'far fa-envelope-open',
-            authenticated: true
-        },
+
         // User Orders Profile
         userOrders: {
             //permission: 'icommerce.orders.index',
@@ -226,24 +227,23 @@ if (appConfig && appConfig.modules) {
 //#example: responsePages.<title-page> = <'title'>
 //qblog
 //admin index
-/*
 responsePages.app.home.name='app.admin'
 responsePages.qblog.posts.layout= () => import('src/layouts/admin')
 responsePages.qblog.posts.path=  '/admin/blog/articulos/index'
 responsePages.qblog.categories.layout= () => import('src/layouts/admin')
 responsePages.qblog.categories.path='/admin/blog/categorias/index'
-responsePages.frontqblog.index.page= () => import('src/pages/master/qblog/index')
-responsePages.frontqblog.index.layout= () =>import('src/layouts/master')
-/!*
+/*responsePages.frontqblog.index.page= () => import('src/pages/master/qblog/index')
+responsePages.frontqblog.index.layout= () =>import('src/layouts/master')*/
+/*
 responsePages.frontqblog.show.page= () => import('src/pages/master/qblog/show'),
 responsePages.frontqblog.show.layout= () =>import('src/layouts/master')
-*!/
+
 
 responsePages.frontqblog.show.path='articulo/:category/:slugPost'
 responsePages.frontqblog.show.page= () => import('src/pages/master/qblog/show'),
 responsePages.frontqblog.show.layout= () =>import('src/layouts/master')
 responsePages.frontqblog.show.path='articulo/:category/:slugPost'
-
+*/
 //qcommerce
 responsePages.qcommerce.products.layout= () => import('src/layouts/admin')
 responsePages.qcommerce.products.path= '/admin/ecommerce/productos'
@@ -292,18 +292,18 @@ responsePages.quser.userProfile.path='admin/me/profile'
 
 // QUSER FRONTEND
 responsePages.frontquser.userProfile.path ='/account/me/edit'
-responsePages.frontquser.userProfile.layout = () => import('src/layouts/account.vue')
-responsePages.frontquser.userProfile.page = () => import('src/layouts/quser/profile')
-responsePages.frontquser.login.layout = () => import('src/layouts/init.vue')
-responsePages.frontquser.login.page = () => import('src/layouts/quser/login')
-responsePages.frontquser.register.layout = () => import('src/layouts/init.vue')
-responsePages.frontquser.register.page = () => import('src/layouts/quser/register')
-responsePages.frontquser.logout.layout = () => import('src/layouts/init.vue')
-responsePages.frontquser.logout.page =  () => import('src/layouts/quser/logout')
-responsePages.frontquser.resetPassword.layout = () => import('src/layouts/init.vue')
-responsePages.frontquser.resetPassword.page = () => import('src/layouts/quser/resetPassword')
-responsePages.frontquser.resetPasswordComplete.layout = () => import('src/layouts/init.vue')
-responsePages.frontquser.resetPasswordComplete.page = () => import('src/layouts/quser/resetPasswordComplete')
+responsePages.frontquser.userProfile.layout = () => import('src/layouts/admin.vue')
+responsePages.frontquser.userProfile.page = () => import('src/pages/front/quser/profile')
+responsePages.frontquser.login.layout = () => import('src/layouts/account.vue')
+responsePages.frontquser.login.page = () => import('src/pages/front/quser/login')
+responsePages.frontquser.register.layout = () => import('src/layouts/account.vue')
+responsePages.frontquser.register.page = () => import('src/pages/front/quser/register')
+responsePages.frontquser.logout.layout = () => import('src/layouts/account.vue')
+responsePages.frontquser.logout.page =  () => import('src/pages/front/quser/logout')
+responsePages.frontquser.resetPassword.layout = () => import('src/layouts/account.vue')
+responsePages.frontquser.resetPassword.page = () => import('src/pages/front/quser/resetPassword')
+responsePages.frontquser.resetPasswordComplete.layout = () => import('src/layouts/account.vue')
+responsePages.frontquser.resetPasswordComplete.page = () => import('src/pages/front/quser/resetPasswordComplete')
 
 
 // QQUIZ
@@ -329,11 +329,11 @@ responsePages.qredeems.redeems.path=  '/admin/iredeems/redeems/index'
 
 // QREDEEMS FRONTEND
 responsePages.frontqredeems.userAccount.path='account/redeems/points'
-responsePages.frontqredeems.userAccount.layout = () => import('src/layouts/account.vue')
+responsePages.frontqredeems.userAccount.layout = () => import('src/layouts/admin.vue')
 responsePages.frontqredeems.userAccount.page= () => import('src/layouts/qredeems/account/index')
 
 responsePages.frontqredeems.userPrizes.path='account/prizes'
-responsePages.frontqredeems.userPrizes.layout = () => import('src/layouts/account.vue')
+responsePages.frontqredeems.userPrizes.layout = () => import('src/layouts/admin.vue')
 
 //QFORM
 responsePages.qform.forms.layout= () => import('src/layouts/admin')
@@ -367,13 +367,15 @@ responsePages.qsubscription.paymentMethods.layout= () => import('src/layouts/adm
 responsePages.qsubscription.paymentMethods.path=  '/admin/subscriptions/payment-methods'
 responsePages.qsubscription.subscriptionsUpdate.layout= () => import('src/layouts/admin')
 responsePages.qsubscription.subscriptionsUpdate.path=  '/admin/subscriptions/subscription/:id'
-responsePages.frontqsubscription.products.page= () => import('src/layouts/qsubscription/frontend/products/show')
+/*responsePages.frontqsubscription.products.page= () => import('src/layouts/qsubscription/frontend/products/show')*/
 
+/*
 //QMARKETPLACE
 responsePages.qmarketplace.myStoreProductCreate.page= () => import('src/layouts/qmarketplace/admin/stores/products/form')
 responsePages.qmarketplace.myStoreProductEdit.page= () => import('src/layouts/qmarketplace/admin/stores/products/form')
 responsePages.qmarketplace.myStoreCategoryProducts.layout= () => import('src/layouts/admin')
 responsePages.qmarketplace.storeProductsCreate.page= () => import('src/layouts/qmarketplace/admin/stores/products/form')
+*/
 
 //QTICKET
 responsePages.qticket.tickets.layout= () => import('src/layouts/admin')
@@ -407,6 +409,5 @@ responsePages.qbanner.createBanner.layout= () => import('src/layouts/admin')
 responsePages.qbanner.createBanner.path= '/admin/banners/banner/create/:sliderId'
 responsePages.qbanner.updateBanner.layout= () => import('src/layouts/admin')
 responsePages.qbanner.updateBanner.path= '/admin/banners/banner/update/:sliderId/:id'
-*/
 
 export default responsePages
